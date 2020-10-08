@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+
+        <body>
+            <h1 style="background-color:darkgreen; color:white; text-align: center;">Tienda Virtual</h1>
+
+            {% include 'barra.html' %}
+            
+            <h2>Ventas de articulos en general</h2>
+
+            {% block content %}{% endblock %}
+        </body>
+
+        <p style="background-color:darkgreen; color:white; text-align: right;">Tienda Virtual, agradece su visita</p>
+    </head>
+</html>

@@ -1,0 +1,44 @@
+<html>
+
+<body>
+    {% include 'barra.html' %}
+
+    <h1>
+        Mi primera plantilla
+    </h1>
+
+    {% if nombre_usuario == 'Jose' %}
+        <p>El curso espero este bien estructurado</p>
+
+    {% else %}
+        <p>El cruso de seguro marchara bien</p>
+
+    {% endif %}
+
+    <p>
+        Los datos del siguiente usuario son:
+
+            Nombre: {{nombre_usuario}}
+            Apellido: {{apellido_usario}}
+            Edad: {{edad_usuario}}
+    </p>
+    <p>
+        La fecha actual es: {{fecha.day}}
+    </p>
+    <p><strong>Cursos Disponibles:</strong></p>
+    <p>
+        <ul>
+        {% if cursos %}
+            {% for curso in cursos %}
+
+                <li>{{curso}}</li>
+
+            {% endfor %}
+        {% else %}
+            <p>No hay elementos que mostrar</p>
+        {% endif %}
+        </ul>
+    </p>
+</body>
+
+</html>
